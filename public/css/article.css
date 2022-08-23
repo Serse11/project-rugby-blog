@@ -250,6 +250,14 @@ h1 {
         margin: 0;
     }
 
+    .container-comments {
+        width: 65%;
+    }
+
+    .valid-comment-btn {
+        width: 50%;
+    }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
