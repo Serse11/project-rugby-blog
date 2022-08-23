@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    background-color: whitesmoke;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+     display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.img-hero-section {
+    width: 99%;
+    height: 85vh;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    animation: ani1 2.5s ease-out forwards;
+}
+
+.container-text {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10em;
+    animation: ani2 0.8s ease-out forwards;
+}
+
+.title-hero-section {
+    opacity: 0;
+    margin: 0;
+}
+
+.title-hero-section {
+    color: #0072ca;
+    font-size: 185px;
+    text-shadow: 0 0 8px #000;
+    letter-spacing: normal;
+    animation: ani2 1.5s ease-out 0.7s forwards;
+}
+
+.text-hero-section {
+    opacity: 0;
+    margin: 0;
+}
+
+.text-hero-section {
+    color: #db2114e7;
+    padding-bottom: 4em;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px #000;
+    animation: ani2 0.5s ease-out 1s forwards;
+}
+
+@keyframes ani1 {
+    100% {
+        transform: scale(1.01);
+    }
+}
+
+@keyframes ani2 {
+    100% {
+        opacity: 1;
+    }
+}
+
+.story-telling {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-story {
+    color: #0072ca;
+    font-size: 55px;
+    font-weight: 300;
+}
+
+.container-shedule-img {
+    display: flex;
+    padding: 1em;
+}
+
+.schedule-last-results {
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 2em;
+    font-size: medium;
+    font-weight: 300;
+    padding: 1em;
+    background-color: #ffffff;
+}
+
+.schedule-last-results h3 {
+    border-bottom: 1px solid rgb(197, 197, 197);
+    padding: 1em;
+}
+
+.container-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+    padding: 1em;
+    border-bottom: 1px solid rgb(197, 197, 197);
+    line-height: 1.5em;
+}
+
+.games {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.match-club p{
+    margin: 2em;
+}
+
+.french-team {
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.french-score {
+    font-weight: bold;
+}
+
+.container-score-club {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+.icon-team {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin: 1em;
+    vertical-align: middle;
+}
+
+.container-img-in-shedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+    gap: 1em;
+}
+
+.text-img-shedule {
+    font-weight: 100;
+    font-style: italic;
+    width: 80%;
+    text-align: end;
+}
+
+.img-shedule {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+
+.container-title-last-articles {
+    text-align: center;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+.container-title-last-articles h3 {
+    color: #db2114e7;
+    font-size: 55px;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .container-text {
+        width: 80%;
+    }
+
+    .title-hero-section {
+        font-size: 75px;
+    }
+    .text-hero-section {
+        padding-bottom: 0;
+        font-size: 35px;
+    }
+
+    .container-shedule-img {
+        flex-direction: column;
+    }
+
+    .schedule-last-results {
+        width: 80%;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .title-hero-section {
+        font-size: 135px;
+    }
+
+    .container-text {
+        width: 80%;
+    }
+
+    .container-shedule-img {
+        align-items: center;
+    }
+
+    .img-shedule {
+        width: 100%;
+    }
+
+    .container-img-in-shedule {
+        width: 45%;
+    }
+
+    .schedule-last-results {
+        width: 55%;
+    }
+}
