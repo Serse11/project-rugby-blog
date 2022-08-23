@@ -2,7 +2,7 @@
     <section class="hero-section">
         <div class="container-text">
             <div>
-                <p class="title-hero-section">OVAL'ACTU</p>
+                <p class="title-hero-section">OVAL' ACTU</p>
             </div>
             <div>
                 <p class="text-hero-section">Plus d'excuse pour manquer l'actu !</p>
