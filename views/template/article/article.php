@@ -7,7 +7,9 @@
 <div class="container-card-article">
 	<?php foreach ($params["article"] as $key => $article) { ?>
 		<div class="card-article">
-			<img src="<?php echo $article->getFile_path_image(); ?>" alt="">
+		<a href="/public/?page=article_show&article_id=<?= $article->getId();?>">
+		    <img src="<?php echo $article->getFile_path_image(); ?>" alt="">
+		</a>	
 			<h3><?php echo $article->getTitle();?></h3>
 			<div class="container-btn-date">
 				<a href="/public/?page=article_show&article_id=<?php echo $article->getId();?>"><button class="btn-link-show-article">VOIR</button></a>
