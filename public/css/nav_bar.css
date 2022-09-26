@@ -107,7 +107,7 @@ a {
     display: none;
 }
  
-@media all and (max-width: 991px) {
+@media all and (max-width: 1024px) {
     nav
     {
         height: 60px;

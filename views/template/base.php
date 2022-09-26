@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/public/css/footer.css">
     <link rel="stylesheet" href="/public/css/form.css">
     <link rel="stylesheet" href="/public/css/article.css">
+    <link rel="stylesheet" href="/public/css/form_user.css">
     <link rel="shortcut icon" href="/public/assets/images/goal.png" type="image/x-icon">
     <script src="/public/js/form.js" defer></script>
   </head>

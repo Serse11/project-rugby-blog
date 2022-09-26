@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;700&display=swap');
+
+.container-text-form-user {
+    font-size: 26px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.text-form-user {
+    margin: 1em;
+}
+
+.container-form-user {
+    background-color: #fff;
+    padding: 1em;
+    margin: 3.5em;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 35%;
+    text-align: start;
+    position: relative;
+    transition: all ease .2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-form-user:hover {
+    box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.84);
+}
+
+.form-user{
+    padding: 25px 50px;
+}
+
+.form-field-user {
+    margin-bottom: 5px;
+}
+
+.form-field-user label {
+    display: block;
+    color: #939393;
+    font-weight: 100;
+    margin: 5px;
+}
+
+.form-field-user input {
+    border: solid 1px #939393;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: block;
+    width: 75%;
+    background-color: transparent;
+    color: #939393;
+}
+
+.form-field-user input:focus {
+    outline: none;
+}
+
+#btn-user {
+    width: 60%;
+    padding: 3%;
+    background: #fff;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-radius: 6px;
+}
+
+.text-create-user {
+    color: #939393;
+}
+
+.to-create-acount {
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    width: 65%;
+    text-align: center;
+    padding: 0.5em;
+    text-align: end;
+}
+
+.link-create-acount {
+    text-decoration: underline;
+    color: #939393;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.valid-message {
+    color: green;
+}
+
+.error-message {
+    color: red;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .container-form-user {
+        width: 65%;
+        align-items: center;
+        margin-right: 2em;
+    }
+
+    .form-field-user input{
+        width: 90%;
+    }
+
+    #btn-user {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container-form-user {
+        width: 50%;
+    }
+}

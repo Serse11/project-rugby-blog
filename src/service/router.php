@@ -3,6 +3,8 @@
 require_once dirname(__DIR__) . "/Controller/HomeController.php";
 require_once dirname(__DIR__) . "/Controller/ArticleController.php";
 require_once dirname(__DIR__) . "/Controller/ContactController.php";
+require_once dirname(__DIR__) . "/Controller/UserController.php";
+
 
 
 /**
@@ -30,6 +32,20 @@ const ROUTING = [
         "controller" => "ArticleController",
         "action" => "add",
         "title" => "Créer un article",
+    ],
+    "user_add" => [
+        "controller" => "UserController",
+        "action" => "add",
+        "title" => "Ajout d'utilisateur",
+    ],
+    "user_connexion" => [
+        "controller" => "UserController",
+        "action" => "connexion",
+        "title" => "Connexion"
+    ],
+    "user_disconnect" => [
+        "controller" => "UserController",
+        "action" => "disconnect"
     ],
     "contact" => [
         "controller" => "ContactController",

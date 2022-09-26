@@ -1,0 +1,1 @@
+<?php include_once dirname(__DIR__) . "/user/_template_part/connexion_user.php"; ?>
