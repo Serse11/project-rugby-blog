@@ -14,7 +14,7 @@ const ROUTING = [
     "home" => [
         "controller" => "HomeController",
         "action" => "index",
-        "title" => "Acceuil",
+        "title" => "Accueil",
         "description" => "Retrouvez toute l'actu du rugby francais sur ce blog !"
     ],
     "article" => [
@@ -26,26 +26,44 @@ const ROUTING = [
     "article_show" => [
         "controller" => "ArticleController",
         "action" => "show",
-        "title" => "Article"
+        "title" => "Article",
+        "description" => "Article"
     ],
     "article_add" => [
         "controller" => "ArticleController",
         "action" => "add",
         "title" => "Créer un article",
+        "description" => "Créer votre article"
+    ],
+    "article_deleted" => [
+        "controller" => "ArticleController",
+        "action" => "deleted",
+        "title" => "Supprimez votre article",
+        "description" => "Supprimez votre article"
+    ],
+    "article_update" => [
+        "controller" => "ArticleController",
+        "action" => "update",
+        "title" => "Modifiez votre article",
+        "description" => "Modifiez votre article si besoin"
     ],
     "user_add" => [
         "controller" => "UserController",
         "action" => "add",
-        "title" => "Ajout d'utilisateur",
+        "title" => "Créer votre profil",
+        "description" => "Créer un profil pour pouvoir partager l'actu !"
     ],
     "user_connexion" => [
         "controller" => "UserController",
         "action" => "connexion",
-        "title" => "Connexion"
+        "title" => "Connexion",
+        "description" => "Connectez vous pour créer votre article"
     ],
     "user_disconnect" => [
         "controller" => "UserController",
-        "action" => "disconnect"
+        "action" => "disconnect",
+        "title" => "Deconnexion",
+        "description" => "Deconnectez vous"
     ],
     "contact" => [
         "controller" => "ContactController",
@@ -69,11 +87,13 @@ function getRouteFromUrl():void
     $controller->{$path['action']}();
 }
 
+/*fonction qui retourne la valeur de la clé title d'une page*/
 function getPageTitle(){
     $page = $_GET['page'] ?? 'home';
     return ROUTING[$page]['title'];
 }
 
+/*fonction qui retourne la valeur de la clé description qui correspond a la meta-description d'une page */
 function getPageDescription(){
     $page = $_GET['page'] ?? 'home';
     return ROUTING[$page]['description'];

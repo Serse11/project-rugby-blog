@@ -9,6 +9,7 @@ class UserRepository extends AbstractRepository
     /**
      * @param string $username
      * @return mixed une valeur 
+     * fonction qui permet de trouver un utilisateur par sont username, pratique pour la connexion
      */
     public function findOneByUsername(string $username): mixed
     {
@@ -17,12 +18,13 @@ class UserRepository extends AbstractRepository
                   WHERE username = :username ;
                 ";
         $params = [":username" => $username];
-        return $this->executeQuery($query, "user", $params);
+        return $this->executeQuery($query, "User", $params);
     }
 
     /**
      * @param User $user prend en paramètre un onject User
      * @return mixed une valeur 
+     * fonction qui permet de créer un nouvel utilisateur
      */
     public function insert(User $user): mixed
     {
@@ -40,6 +42,7 @@ class UserRepository extends AbstractRepository
     /**
      * @param int $id user
      * @return User
+     * fonction qui permet de trouver un utilisateur par son id 
      */
     public function find(int $id): mixed
     {

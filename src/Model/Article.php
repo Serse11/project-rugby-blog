@@ -39,6 +39,16 @@ class Article
     {
         return $this->id;
     }
+    
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */
+    public function setId(?int $id): void
+    {
+        $this->id = $id;
+    }
 
     /**
      * Get the value of title

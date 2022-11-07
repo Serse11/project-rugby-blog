@@ -1,11 +1,134 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;700&display=swap');
 
+/*reset css of page*/
 * {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    
 }
 
+
+/*css for Nav-bar*/
+nav {
+    background-color: black;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+    object-fit: cover;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.main_pages {
+    list-style-type: none;
+    margin: 0 4em;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.main_pages li {
+    margin: 0 4em;
+    padding: 1em;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    position: relative;
+}
+
+.home-link::after {
+    content: "";
+    position: absolute;
+    background-color: #0072ca;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.home-link:hover:after {
+    width: 100%;
+}
+
+.article-link::after {
+    content: "";
+    position: absolute;
+    background-color: whitesmoke;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.article-link:hover:after {
+    width: 100%;
+}
+
+.contact-link::after {
+    content: "";
+    position: absolute;
+    background-color: #db2114e7;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.contact-link:hover::after {
+    width: 100%;
+}
+
+.home-link:hover {
+    color: #0072ca;
+
+}
+
+.article-link:hover {
+    color: white;
+}
+
+.contact-link:hover {
+    color: #db2114e7;
+}
+
+.user_logo {
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-disconnect-user {
+    padding: 0.5em;
+    text-align: center;
+    font-size: 10px;
+    text-transform: uppercase;
+    border: 1px solid #939393;
+    border-radius: 45%;
+    background-color: whitesmoke;
+}
+
+.nav_label, #toggle {
+    display: none;
+}
+
+ 
+/* css for Home page*/
 main {
     background-color: whitesmoke;
 }
@@ -186,13 +309,708 @@ main {
 }
 
 .container-title-last-articles h3 {
-    color: #db2114e7;
+    color: #db2114;
     font-size: 55px;
     font-weight: 300;
 }
 
+
+/*css for Article Page*/
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 55px;
+    color: #0072ca;
+    font-weight: 300;
+    padding: 0.5em;
+}
+
+.container-title-page {
+    margin: 1em;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.container-title-page img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 2em;
+}
+
+.container-btn-create {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.btn-link-create-article {
+    width: 9em;
+    padding: 0.5em;
+    background-color: black;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+}
+
+.btn-link-update-article {
+    width: 15em;
+    padding: 0.5em;
+    background-color: black;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+}
+
+.container-card-article {
+    width: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+ 
+.card-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1em;
+    padding: 0.5em;
+    width: 25%;
+    line-height: 1.5em;
+    border: 1px solid rgba(168, 166, 166, 0.861);
+    border-radius: 9px;
+    background-color: whitesmoke;
+}
+
+.card-article img {
+    margin: 0.5em;
+    width: 95%;
+    height: 231px;
+    object-fit: cover;
+}
+
+.card-article h3 {
+    text-transform: uppercase;
+    padding: 0.5em;
+    font-weight: 400;
+    border-bottom: 1px solid gray;
+}
+
+.card-article a {
+    cursor: pointer;
+}
+
+.btn-link-show-article {
+    width: 4.5em;
+    background-color: black;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-delete-article {
+    width: 5.5em;
+    background-color: red;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-update-article {
+    width: 5em;
+    background-color: black;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.container-btn-date {
+    margin: 0.5em;
+}
+
+.paragraph-date {
+    color: gray;
+    font-weight: 200;
+    font-size: 13px;
+    text-align: right;
+}
+
+
+/*css for modal_delete*/
+.centerpoint {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.modal_delete {
+    width: 35%;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    margin-left: 460px;
+    margin-top: 275px;
+}
+
+.message_confirmation_delete {
+    font-size: 24px;
+    padding: 1em;
+}
+
+.modal_cancel_btn{ 
+    padding: 10px; 
+    font-size: 16px;
+    border-radius: 6px;
+    margin: 0.5em;
+} 
+
+.modal_delete_btn {
+    padding: 10px; 
+    font-size: 16px;
+    border-radius: 6px;
+    margin: 0.5em;
+    background-color: red;
+}
+
+dialog{ 
+    border-radius: 9px; 
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); 
+}
+
+dialog::backdrop{ 
+    background-color: rgba(0, 0, 0, 0.9); 
+    align-content: center;
+} 
+
+
+/* css for article_show */
+.container-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
+}
+
+.container-img-article_show img{
+    width: 800px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.container-img-article_show p {
+    margin: 1em;
+}
+
+.container-article h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 26px;
+    margin: 1em;
+}
+
+.container-content-article_show {
+    width: 75%;
+    line-height: 1.75em;
+    font-size: 18px;
+    margin: 2em;
+}
+
+.form-comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    padding: 0.75em;
+    border: 1px solid rgb(126, 125, 125);
+    border-radius: 9px;
+    background-color: whitesmoke;
+}
+
+.container-comm-article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+}
+
+.valid-comment-btn {
+    padding: 0.25em;
+    width: 15%;
+    border-radius: 6px;
+    border: 1px solid rgb(152, 152, 152);
+    cursor: pointer;
+}
+
+.container-form-comments {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 1em;
+}
+
+.container-comments {
+    border: 0.5px solid black; 
+    width: 35%; 
+    margin: 0.5em;
+    padding: 1em;
+    background-color: whitesmoke;
+    border-radius: 6px;
+}
+
+.content-comment {
+    font-weight: 200;
+    padding: 0.5em;
+    font-style: italic;
+}
+
+.username-comment {
+    text-align: right;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.img-username-comm {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0.5em;
+}
+
+.not-comm-message {
+    width: 100%;
+    color: rgb(118, 118, 118);
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+/*css for Form user connexion and user register*/
+.container-text-form-user {
+    font-size: 26px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.container-form-user {
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 35%;
+    text-align: start;
+    position: relative;
+    transition: all ease .2s;
+    display: flex;
+    flex-direction: column;
+    margin-left: 435px;
+}
+
+.container-form-user:hover {
+    box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.84);
+}
+
+.form-user{
+    padding: 1em;
+    align-items: center;
+    width: 100%;
+}
+
+.form-field-user {
+    margin-bottom: 5px;
+}
+
+.form-field-user label {
+    display: block;
+    color: #939393;
+    font-weight: 100;
+    margin: 5px;
+    margin-left: 40px;
+}
+
+.form-field-user input {
+    border: solid 1px #939393;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-left: 40px;
+    font-size: 14px;
+    display: block;
+    width: 75%;
+    background-color: transparent;
+    color: #939393;
+}
+
+.form-field-user input:focus {
+    outline: none;
+}
+
+#btn-user {
+    width: 60%;
+    padding: 3%;
+    background: #fff;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-radius: 6px;
+    margin-left: 60px;
+}
+
+.text-create-user {
+    color: #939393;
+    width: 90%;
+    margin-left: 45px;
+}
+
+.to-create-acount {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.link-create-acount {
+    text-decoration: underline;
+    color: #939393;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.valid-message {
+    color: green;
+}
+
+.error-message {
+    color: red;
+    margin: 1em;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.img_page_connexion_add {
+    width: 650px;
+    height: 350px;
+    object-fit: cover;
+    margin-top: 30px;
+    margin-left: 370px;
+    
+}
+
+
+/* css form page contact-us*/
+:root {
+   --error-color: #dc3545;
+   --success-color: #28a745;
+   --warning-color: #ffc107;
+}
+
+.container-form-text {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-text-icon{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-text-contact {
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.container-icons-contact {
+    margin: 1em;
+}
+
+.icons-contact {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin: 1em;
+}
+
+.contact-img-text {
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.img-contact {
+    width: 80%;
+    object-fit: cover;
+    margin: 1em;
+    box-shadow: -1px 1px 17px 0px rgba(0, 0, 0, 0.34);
+}
+
+.container-text-form {
+    font-size: 26px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.text-form {
+    margin: 1em;
+}
+
+.container-form {
+    background-color: #fff;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 45%;
+    text-align: start;
+    position: relative;
+    transition: all ease .2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-form:hover {
+    box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.84);
+}
+
+.form {
+    padding: 10px 35px;
+}
+
+.form-field {
+    margin-bottom: 5px;
+
+}
+
+.form-field label {
+    display: block;
+    color: #939393;
+    font-weight: 100;
+    margin: 5px;
+}
+
+.form-field i {
+    margin: 0.5em;
+}
+
+.form-field input {
+    border: solid 1px #939393;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    color: #939393;
+}
+
+.form-field input:focus {
+    outline: none;
+}
+
+.form-field.error input {
+    border-color: var(--error-color);
+}
+
+.form-field.success input {
+    border-color: var(--success-color);
+}
+
+
+.form-field small {
+    color: var(--error-color);
+}
+
+.form-field textarea {
+    background-color: transparent;
+    border-radius: 6px; 
+    width: 95%; 
+    height: 200px;
+}
+
+#btn {
+    width: 80%;
+    padding: 3%;
+    background: #fff;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-radius: 6px;
+}
+
+.input-btn:hover {
+    cursor: pointer;
+}
+
+#btn:focus {
+    outline: none;
+}
+
+
+/*css for Add article*/ 
+.container-article-add-in-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 65vh;
+}
+
+.form-add-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    padding: 0.75em;
+    border: 1px solid rgb(126, 125, 125);
+    border-radius: 9px;
+    height: 45vh;
+}
+
+.textarea-form-add {
+    height: 7em;
+}
+
+.form-add-article input {
+    margin: 1em;
+}
+
+.container-comm-article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+}
+
+.valid-add-article-btn {
+    padding: 0.25em;
+    width: 15%;
+    border-radius: 6px;
+    border: 1px solid rgb(152, 152, 152);
+    cursor: pointer;
+}
+
+.container-form-add-article {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 0.5em;
+}
+
+
+
+/*css for Footer*/
+footer {
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    position: static;
+    width: 100%;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+    object-fit: cover;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.container-icons-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    gap: 1em;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    margin: 1em;
+}
+
+.container-footer-text {
+    padding: 1em;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 16px;
+}
+
+/*responsive for navbar for mobile and tablet*/
+@media all and (max-width: 1024px) {
+    nav
+    {
+        justify-content: space-around;
+    }
+
+    nav .main_pages
+    {
+        display: none;
+        flex-direction: column;
+        background: black;
+        z-index: 2;
+    }
+ 
+    nav .main_pages a {
+        width: 30%;
+    }
+ 
+    .main_pages li {
+        margin: 0;
+        padding: 0.60em;
+    }
+    
+    .nav_label 
+    {
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0em;
+        font-size: 50px;
+        color: white;
+        cursor: pointer;
+        z-index: 4;
+    }
+
+    #toggle:checked + .main_pages {
+        display: flex;
+        margin: -10px;
+        z-index: 3;
+        background-color: transparent;
+        padding: 0;
+    }
+}
+
+/*Reponsive for mobile*/
 @media screen and (min-width: 320px) and (max-width: 768px) {
-    .container-text {
+/*reponsive for home page*/
+     .container-text {
         width: 80%;
     }
 
@@ -212,10 +1030,122 @@ main {
     .schedule-last-results {
         width: 80%;
     }
+
+/*responsive for page article*/
+    .container-title-page img {
+        margin: 1em;
+    }
+
+    .card-article {
+        width: 80%;
+    }
+
+    .container-title-page {
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
     
+    .modal_delete {
+        width: 65%;
+        margin-left: 45px;
+    }
+    
+/*responsive for page article show*/
+    .container-article h3 {
+        margin: 0;
+        padding: 0.25em;
+    }
+    .container-img-article_show img{
+        width: 380px;
+        height: 250px;
+        object-fit: cover;
+    }
+    
+    .container-content-article_show {
+        margin: 0.5em; 
+        width: 100%;   
+    }
+
+    .form-comments {
+        width: 90%;
+        margin: 0;
+    }
+
+    .container-comments {
+        width: 65%;
+    }
+
+    .valid-comment-btn {
+        width: 50%;
+    }
+
+/*responsive for page user_connexion */
+    .container-form-user {
+        width: 65%;
+        align-items: center;
+        margin-right: 2em;
+        margin-left: 40px;
+    }
+
+    .form-field-user input{
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .form-field-user label {
+        margin-left: 0;
+    }
+    
+    .text-create-user {
+        margin-left: 25px;
+    }
+    
+    #btn-user {
+        width: 75%;
+        margin-left: 30px;
+    }
+    
+    .img_page_connexion_add {
+        width: 375px;
+        height: 350px;
+        object-fit: cover;
+        margin-top: 15px;
+        margin-left: 10px;
+        
+    }
+   
+/*responsive for page contact*/    
+    .container-form-text {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .container-text-icon {
+        width: 90%;
+    }
+    .container-form {
+        width: 85%;
+        align-items: center;
+        margin-right: 2em;
+    }
+    
+/*reponsive for page add article*/
+    .form-add-article {
+        width: 90%;
+        margin: 0;
+    }
+
+    .valid-add-article-btn {
+        width: 50%;
+    }
+
 }
 
+
+/*responsive for tablet*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+/*responsive for home page*/    
     .title-hero-section {
         font-size: 120px;
     }
@@ -238,5 +1168,65 @@ main {
 
     .schedule-last-results {
         width: 55%;
+    }
+    
+/*responsive for page article*/
+    .card-article {
+        width: 35%;
+    }
+
+    .container-content-article_show {
+        width: 80%;
+    }
+    
+    .modal_delete {
+        width: 65%;
+        margin-left: 150px;
+        margin-top: 50px;
+    }
+    
+/*responsive for page article show*/
+    .container-content-article_show {
+        width: 90%;
+    }
+    
+/*responsive for page user connexion*/
+    .container-form-user {
+        width: 50%;
+        margin-left: 180px;
+    }
+    
+    .form-field-user input{
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .form-field-user label {
+        margin-left: 0;
+    }
+    
+     .text-create-user {
+        margin-left: 25px;
+    }
+    
+    #btn-user {
+        width: 75%;
+        margin-left: 30px;
+    }
+    
+    .img_page_connexion_add {
+        width: 650px;
+        height: 350px;
+        object-fit: cover;
+        margin-top: 15px;
+        margin-left: 85px;
+    }
+    
+/*responsive for page contact*/    
+    .container-text-icon {
+        width: 50%;
+    }
+    .container-form {
+        width: 50%;
     }
 }

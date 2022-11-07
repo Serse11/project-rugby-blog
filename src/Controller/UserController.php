@@ -8,6 +8,7 @@ class UserController extends AbstractController
 
     /**
      * @Route user_connexion
+     * fonction de connexion de l'utilisateur
      */
     public function connexion()
     {
@@ -21,7 +22,10 @@ class UserController extends AbstractController
                 $error = true;
                 $_SESSION['user_is_connected'] = true;
                 $_SESSION['user_id'] = $user->getId();
+                $_SESSION['role'] = $user->getRole();
                 $message = "vous etes connecté";
+                header("Location: ./?page=article");
+                exit;
             }
         }
         return $this->renderView("/views/template/user/user_connexion.php", 
@@ -33,15 +37,19 @@ class UserController extends AbstractController
 
     /**
      * @Route user_disconnect
+     * fonction de deconnexion de l'utilisateur
      */
     public function disconnect()
     {
-        unset($_SESSION["user_is_connected"]);
-        header("Location: /public/?page=home");
+        if (isset($_SESSION["user_is_connected"]) && $_SESSION["user_is_connected"]) {
+            session_destroy();
+            header("Location: ./?page=home");
+        }
     }
 
     /**
      * @Route user_add
+     * fonction de creation d'utilisateur
      */
     public function add()
     {
@@ -80,6 +88,7 @@ class UserController extends AbstractController
                     $error = true;
                     $message = "L'utilisateur a bien été créé.";
                 }
+                header('Location: ./?page=article');
             }
         }
 

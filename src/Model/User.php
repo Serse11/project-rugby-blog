@@ -27,6 +27,12 @@ class User
      * @param string $password
      */
     private string $password;
+    
+    
+     /**
+     * @param string $role
+     */
+    private string $role; 
 
     public function __construct()
     {
@@ -111,5 +117,15 @@ class User
     {
         $this->password = $password;
 
+    }
+    
+    public function getRole(): ?string 
+    {
+        return $this->role;
+    }
+    
+    public function setRole(string $role): void 
+    {
+        $this->role = $role;
     }
 }

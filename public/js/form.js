@@ -3,6 +3,10 @@ const emailEl = document.querySelector('#email');
 const yourMessageEl = document.querySelector('#message');
 const form = document.querySelector('#contact');
 
+if(document.querySelector('#name') !== null && document.querySelector('#email') !== null 
+&& document.querySelector('#message') !== null && document.querySelector('#contact') !== null) {
+    
+
 const checkName = function() {
     let valid = false;
     const name = nameEl.value.trim();
@@ -55,7 +59,6 @@ const showError = function(input, message) {
     formField.classList.add('error');
 
     const error = formField.querySelector('small');
-    error.textContent = message;
 };
 
 const showSuccess = function(input) {
@@ -65,7 +68,6 @@ const showSuccess = function(input) {
     formField.classList.add('success');
 
     const error = formField.querySelector('small');
-    error.textContent = "C'est okayyyy Messire !";
 };
 
 
@@ -101,3 +103,5 @@ form.addEventListener('input', function (e) {
             break;
     };
 });
+
+};
